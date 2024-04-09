@@ -21,3 +21,25 @@ const myFunction = function (){
     console.log("First function");
 }
 
+
+//memory types summary
+//Stack(primitive), Heap(non-primitive)
+let myName = "Umair";
+let anotherName = myName;
+anotherName = "Arshad";
+// console.log(myName);
+// console.log(anotherName);
+//changing anotherName wont change myName because it is working in stack 
+
+//Now heap
+let userOne ={
+    id:1,
+    name:"Umair",
+    email:"umair@gmail.com"
+}
+let userTwo = userOne;
+console.log("Before changing  " + userOne.email);
+userTwo.email = "muhammadumair@gmail.com";
+console.log("After changes  " + userOne.email);
+//we saw that heap / non primitive types gives us the reference not a copy.
+
