@@ -27,5 +27,36 @@ function loginUserMessage (username = "Muhammad Umair"){
     return `${username} Just Logged In`;
 }
 
-console.log(loginUserMessage());
+// console.log(loginUserMessage());
 
+//function with unlimited returns like add to cart
+
+
+//using rest / spread operator in parameter
+function addToCart (...num1){
+    return num1;
+}
+
+// console.log(addToCart(100,200,300,400));
+
+// const product = {
+//     name:"Tea",
+//     price: 250,
+// }
+
+function objectHandling(anyObject){
+        console.log(`Product name is ${anyObject.name} and price is ${anyObject.price}`);
+}
+
+// objectHandling(product);
+//Passing object directly to function
+objectHandling({
+    name:"Tea",
+    price: 250,
+});
+
+function returnThirdValue(anyArray){
+    return anyArray[2];
+}
+
+// console.log(returnThirdValue([1,2,4,4])); just like object passing
