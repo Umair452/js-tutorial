@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Creating a new div
+    let div = document.createElement('div'); //initializing
+    console.log(div);
+    div.className = "parent"; //assigning class name
+    div.id = Math.round(Math.random() * 10 +1); //assigning random number as an id
+    div.setAttribute("title", "First Name");//setting some attributes if needed
+    // div.innerText = "CHAI AUR CODE"; this approach first gets the value then over writes it so right now not using it
+    //create a text node instead of innerTExt
+    const addText = document.createTextNode("CHAI aur CODE"); //creating a node instead of above
+    div.appendChild(addText); //adding that node into the div first
+    document.body.appendChild(div); //finally adding the div into body to render
+
+</script>
+</html>
