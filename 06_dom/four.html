@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    //normal way to add element
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        const parent = document.querySelector('.language');
+        parent.appendChild(li);
+
+    }
+    addLanguage("python");
+
+    //add element without traversing tree
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        const parent = document.querySelector('.language')
+        parent.appendChild(li);
+    }
+    addOptiLanguage("Typescript");
+//    const checking = document.querySelector('.language');
+//    console.log(checking);
+
+
+//replacing an element with other
+const secondLang = document.querySelector('li:nth-child(2)');
+const newLi = document.createElement('li');
+newLi.textContent = "C++";
+secondLang.replaceWith(newLi);
+
+//for first child just write "first-child" instead of nth-child()
+
+//removing element
+
+const lastLang = document.querySelector('li:last-child');
+lastLang.remove();
+</script>
+</html>
