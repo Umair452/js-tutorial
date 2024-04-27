@@ -1,0 +1,72 @@
+//HTML
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Four Colored Squares</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button class="square red" id="red"></button>
+    <button class="square green" id="green"></button>
+    <button class="square blue" id="blue"></button>
+    <button class="square yellow" id="yellow"></button>
+    <h2>Click on any color to change the background color accordingly</h2>
+  </body>
+  <script src="script.js"></script>
+</html>
+
+  //CSS
+
+  .square {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  margin: 5px;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+}
+
+
+//JAVASCRIPT
+const buttons = document.querySelectorAll('.square');
+const body = document.querySelector('body');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', function (event) {
+    switch (event.target.id) {
+      case 'red':
+        body.style.backgroundColor = event.target.id;
+        break;
+      case 'green':
+        body.style.backgroundColor = event.target.id;
+        break;
+      case 'blue':
+        body.style.backgroundColor = event.target.id;
+        break;
+      case 'yellow':
+        body.style.backgroundColor = event.target.id;
+        break;
+      default:
+        body.style.backgroundColor = 'white';
+        break;
+    }
+  });
+});
+
+  
